@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.5.8.2
+- http://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: May 24, 2015 at 06:39 PM
+- Server version: 5.5.42-37.1-log
+- PHP Version: 5.4.23
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="tinrobot_thesis" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="artifacts">
+                CREATE TABLE `artifacts` (
+                  `MuseumNumber` int(11) NOT NULL,
+                  `ExhibitNumber` int(11) NOT NULL,
+                  `ArtifactNumber` int(11) NOT NULL,
+                  `Info` text NOT NULL,
+                  `Image` text NOT NULL,
+                  `TotalArtifactNumber` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`TotalArtifactNumber`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="catagorical">
+                CREATE TABLE `catagorical` (
+                  `ExhibitNumber` int(11) NOT NULL,
+                  `AdditionalInformation` text NOT NULL,
+                  `Weblink` text NOT NULL,
+                  PRIMARY KEY (`ExhibitNumber`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="dramatic">
+                CREATE TABLE `dramatic` (
+                  `ExhibitNumber` int(11) NOT NULL,
+                  `Background` text NOT NULL,
+                  `Tear` text NOT NULL,
+                  `Splash` text NOT NULL,
+                  `FavouredArtifactThere` text NOT NULL,
+                  `FavouredArtifactAbsent` text NOT NULL,
+                  `FavouredArtifactNumber` int(11) NOT NULL,
+                  `AverageTime` text NOT NULL,
+                  PRIMARY KEY (`ExhibitNumber`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="exhibits">
+                CREATE TABLE `exhibits` (
+                  `MuseumNumber` int(11) NOT NULL,
+                  `ExhibitNumber` int(11) NOT NULL,
+                  `ImageMap` text NOT NULL,
+                  `Area` text NOT NULL,
+                  PRIMARY KEY (`ExhibitNumber`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="exhibitVisits">
+                CREATE TABLE `exhibitVisits` (
+                  `MuseumNumber` int(11) NOT NULL,
+                  `ExhibitNumber` int(11) NOT NULL,
+                  `VisitNumber` int(11) NOT NULL AUTO_INCREMENT,
+                  `ExhibitType` text NOT NULL,
+                  `NumberOfArtifacts` int(11) NOT NULL,
+                  `ExhibitTitle` text NOT NULL,
+                  `Image` text NOT NULL,
+                  `VisitStart` datetime NOT NULL,
+                  `VisitEnd` datetime NOT NULL,
+                  PRIMARY KEY (`VisitNumber`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="itinerary">
+                CREATE TABLE `itinerary` (
+                  `MuseumNumber` int(11) NOT NULL,
+                  `ExhibitNumber` int(11) NOT NULL,
+                  `VisitationNumber` int(11) NOT NULL,
+                  `ExhibitTitle` text NOT NULL,
+                  `Image` text NOT NULL,
+                  PRIMARY KEY (`ExhibitNumber`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="museum">
+                CREATE TABLE `museum` (
+                  `MuseumNumber` int(11) NOT NULL,
+                  `ExhibitNumber` int(11) NOT NULL,
+                  `PositionX` int(11) NOT NULL,
+                  `PositionY` int(11) NOT NULL,
+                  `Title` text NOT NULL,
+                  `Picture` text NOT NULL,
+                  `Text` text NOT NULL,
+                  `Icon` text NOT NULL,
+                  `ActiveIcon` text NOT NULL,
+                  PRIMARY KEY (`ExhibitNumber`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="sequential">
+                CREATE TABLE `sequential` (
+                  `ExhibitNumber` int(11) NOT NULL,
+                  `PositionX` int(11) NOT NULL,
+                  `PositionY` int(11) NOT NULL
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="userdata0">
+                CREATE TABLE `userdata0` (
+                  `order` int(11) NOT NULL AUTO_INCREMENT,
+                  `MuseumNumber` int(11) NOT NULL,
+                  `ExhibitNumber` int(11) NOT NULL,
+                  `ArtifactNumber` int(11) NOT NULL,
+                  `Image` text NOT NULL,
+                  `Description` text NOT NULL,
+                  `Info` text NOT NULL,
+                  `Time` datetime NOT NULL,
+                  PRIMARY KEY (`order`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'tinrobot_thesis'
+    -->
+    <database name="tinrobot_thesis">
+        <!-- Table artifacts -->
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">1</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Birds that have adapted to living most of their lives on the open ocean are known as seabirds. Shorebirds, on the other hand, find food and shelter along the coastline. Still other birds migrate between summer and winter habitats, spending only part of the year in a marine environment. All these birds return periodically to land in order to nest.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit1/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">1</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">2</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">These animals are among the most-developed invertebrates. They have more specialized layers, such as digestive and nervous systems. They may not look like our relatives, but the salp and lancelet groups show the evolutionary origins of a central nerve cord.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit2/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">4</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">1</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">All mammals have evolved from marine ancestors, but most of them now live in terrestrial habitats. A few mammals, however, have returned to a marine environment, and show an interesting diversity of shapes, sizes and lifestyles. They include cetaceans such as whales and dolphins, and carnivores such as polar bears, sea otters, seals, seas lions and walruses.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit1/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">2</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">2</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">From tiny snails to giant squids, mollusks display a wide range of body forms and lifestyles. Although they live in all parts of the ocean, they share certain traits: a soft, boneless unsegmented body; a hard shell (there are a few shell-less exceptions); and a large, muscular foot.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit2/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">3</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Raccoon: An omnivorous raccoon finds a good vantage point to spot a bite to eat. There is lots to eat in a marsh: fish, frogs, crayfish, snails, insects, bird eggs.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">5</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">Ruddy Duck: An amorous ritual unfolds. Both the male and female use courtship displays to communicate with their potential mate. </column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">6</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">2</column>
+            <column name="Info">An American Bittern, with it&amp;#39s tall thin build and neutral colouring, easily blends in with the abundant wetland vegetation.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact2.JPG</column>
+            <column name="TotalArtifactNumber">7</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">3</column>
+            <column name="Info">Wilson&amp;#39s Snipe: Despite being one of the most abundant and widespread shorebirds in North America, it&amp;#39s neutral plumage and secretive habits make it difficult to see.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact3.JPG</column>
+            <column name="TotalArtifactNumber">8</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">4</column>
+            <column name="Info">Least Bittern and Dragonfly: A pair of bitterns use their agile legs to cling to reedy plant stalks. Nutritious insects are picked off with quick jabs of their bill.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact4.JPG</column>
+            <column name="TotalArtifactNumber">9</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">5</column>
+            <column name="Info">Red-sided garter snake and wood frog: A garter snake eyes a potential meal. Dense vegetation can offer good cover for both predator and prey.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact5.JPG</column>
+            <column name="TotalArtifactNumber">10</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">6</column>
+            <column name="Info">Sora: A Sora makes good use of the abundant building materials in the marsh. It has loosely woven dead cattails and grasses into a protective basket for its young. 
+</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact6.JPG</column>
+            <column name="TotalArtifactNumber">11</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">7</column>
+            <column name="Info">Tree Swallow: A Tree Swallow takes a little breather from the hunt for insects. Marshes not only offer an abundance of food, but also safety, as there are very few swallow predators there.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact7.JPG</column>
+            <column name="TotalArtifactNumber">12</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">8</column>
+            <column name="Info">Northern Shoveler: a pair of ducks takes flight above the cattails. The male stays close to the female, from courtship to the incubation period. </column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact8.JPG</column>
+            <column name="TotalArtifactNumber">13</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">9</column>
+            <column name="Info">Eastern Kingbird: An Eastern Kingbird surveys the open marsh from its high perch. It flies out to catch any insect that flits by.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact9.JPG</column>
+            <column name="TotalArtifactNumber">14</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ArtifactNumber">10</column>
+            <column name="Info">Marsh Wren: A male Marsh Wren perches near its handiwork. Males are very territorial, often destroying other birds&amp;#39 nests. </column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit3/artifact10.JPG</column>
+            <column name="TotalArtifactNumber">15</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">4</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Images taken by NASA in recent years suggest the presence of water on Mars. But the red planet&amp;#39s atmosphere is too thin and the temperature too cold for water at the surface to remain liquid for long.  </column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit4/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">16</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">4</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">Water is a very common substance in our solar system. Many planets, moons, and comets are thought to contain water, mostly as ice and vapour. But as far as we know, Earth is the only planet with large quantities of liquid water.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit4/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">17</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">4</column>
+            <column name="ArtifactNumber">2</column>
+            <column name="Info">There is evidence of frozen water at our moon&amp;#39s poles. This water probably came from comets that hit the moon during the last two or three billion years. Ice has remained in areas that are shaded by crater rims, where the cold has prevented it from melting or evaporating.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit4/artifact2.JPG</column>
+            <column name="TotalArtifactNumber">18</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">4</column>
+            <column name="ArtifactNumber">3</column>
+            <column name="Info">Comets are essentially big dirty snowballs. The center of a comet is made up of ice and dust. The ice is mostly frozen water, but it can also include ammonia, carbon dioxide, carbon monoxide and methane. </column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit4/artifact3.JPG</column>
+            <column name="TotalArtifactNumber">19</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">4</column>
+            <column name="ArtifactNumber">4</column>
+            <column name="Info">Viewed from space, our planet&amp;#39s most valuable substance shines bright blue. The Earth&amp;#39s richness in water is the main reason why our home is teeming with life.</column>
+            <column name="Image">Media/museum1/exhibits/WaterGallery/exhibit4/artifact4.JPG</column>
+            <column name="TotalArtifactNumber">20</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">5</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Did you notice the spots on the baby cougars? Spotted fur makes it harder for the kittens to be seen in their surroundings. Surprisingly, they need to hide most from male cougars, who often attack a female&amp;#39s offspring. 
+It&amp;#39s easy to determine a cougar kitten&amp;#39s age by looking at its fur. A baby cougar looses it&amp;#39s spots at around six months. 
+</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit5/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">21</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">5</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">Baby cougars begin to eat meat caught by their mother at about six weeks. They&amp;#39re weaned by three months but stay with their mother for at least another year. Growing big and learning survival skills.
+Kittens play with each other to develop their muscles and to practice the movements they&amp;#39ll need for hunting and for defending themselves. </column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit5/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">22</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">6</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Beavers need to keep their front teeth sharp because they use them to cut down trees for shelter and food. The front part of their incisors is covered with hard enamel, while the back is softer and wears down more quickly, leaving a chisel-sharp edge.</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit6/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">23</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">6</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">Beavers can gnaw through tree trunks up to 85cm in diameter, that&amp;#39s even wider then a large garbage can. </column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit6/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">24</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">6</column>
+            <column name="ArtifactNumber">2</column>
+            <column name="Info">With their webbed feet and paddle-like tails, beavers can easily out swim land predators such as coyotes, lynx, foxes, and bears. </column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit6/artifact2.JPG</column>
+            <column name="TotalArtifactNumber">25</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">7</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Usus arctos is the grizzly&amp;#39s scientific name. Ursus means &amp;#39bear&amp;#39 in Latin and arctos means &amp;#39bear&amp;#39 in Greek.
+
+Throughout the summer, grizzles eat rodents, though it can take hours to dig them out of the ground. In the fall, their most important food are berries, nuts, and vegetation.
+
+Once they&amp;#39ve built up enough fat reserves, grizzlies look for a winter den. They may use a natural cave, a hollow fallen tree, or a hole dug in a well drained slope.
+</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit7/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">26</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">8</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">It&amp;#39s September, and this group of males has spent most of the year in a bachelor band. They&amp;#39ll only associate with females in a few months&amp;#39 time, when breeding season starts.
+
+How can you tell how old a thinhorn sheep is? Count the rings on its horns! Over the years, thinhorn sheep accumulate rings, which are a good indicator of age, just like tree trunks. But don&amp;#39t count every ripple, just the deepest ones. </column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit8/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">27</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">8</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">The dominant male is usually the one with the biggest and curliest horns. He&amp;#39s often also one of the oldest, since horns grow larger with age. Can you tell which of these males is the oldest?
+
+Small horned males usually recognize the superiority of those with larger horns and choose not to challenge them, but rams of similar size will butt heads to decide who dominates. The champion wins the right to mate.
+
+Female thinhorn sheep are thought to be receptive to mating for only one day each year. No wonder males engage in such tough competition to get a date with a willing female.
+</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit8/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">28</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">9</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">How many moose can you spot in the diorama? Although they prefer to be alone, moose sometimes gather in a good feeding spot like this one.
+
+The name &amp;#39moose&amp;#39 comes from the Algonquian word that means twig eater. Amazingly, these huge animals manage to survive the cold months on a meager diet of twigs and conifer needles.
+ 
+Does pondweed sound appetizing to you? Sodium rich water plants are a favourite food for moose, who will even dunk their whole heads underwater to reach them.
+Having long legs has many advantages, moose can reach tall branches to nibble twigs, wade in water to gobble up 
+aquatic plants, and walk in deep snow to find better feeding grounds.
+
+Did you notice how large the moose&amp;#39s lips are? Strong and flexible, they&amp;#39re used to strip leaves from shrugs and trees.
+
+Plants are generally low in calories and nutrients. So how does a moose keep its huge body running on such a diet? Quantity! Moose spend most of their time filling up their bellies, taking in up to 20 kilograms of food everyday.</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit9/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">29</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">10</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Muskox may look very much like wild cattle such as bison, but they&amp;#39re more closely related to mountain goats and bighorn sheep.
+
+Both male and female muskox have horns, but those of the male are larger. Horns are an important social tool: they&amp;#39re used for intimidation during herd disputes and they also communicate sexual maturity.
+
+
+</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit10/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">30</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">10</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">With few predators, besides wolves, able to crack their defenses, muskox can live a very long time, up to 25 years.
+
+
+</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit10/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">31</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">11</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">This enormous bison boldly stands its ground against the hungry wolves. Healthy adult bison are intimidating to wolves, who prefer to attack young sick or older animals.
+
+A bison can move surprisingly fast, and may charge a wolf that is approaching a vulnerable member of the herd. Because of this, wolves often target individuals that have been separated from the group.
+
+
+
+</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit11/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">32</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">11</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">These wolves shouldn&amp;#39t get to close to the bison. It could fight back, using it&amp;#39s horns, hooves, and tremendous strength. A bison is capable of badly injuring or even killing a wolf with one swift kick to the head. Ouch!
+
+In a pack, wolves work as a group to catch large animals. When hoofed mammals are hard to find, wolves sometimes target smaller animals, such as beavers and hares.
+
+Hunting is hard work, so wolves revisit a carcass until it&amp;#39s complete devoured. Scavenging animals such as foxes, wolverines and ravens also benefit, stealing unattended leftovers. 
+
+</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit11/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">33</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">12</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">It&amp;#39s hard to hide in such a side open landscape, but that&amp;#39s not a problem for pronghorns. They can not only see great distances, but they also run extremely fast. Predators rarely stand a chance.
+
+How fast can pronghorns run? As the fastest land mammal in North America, the pronghorn can reach a top speed of 95 kilometers an hour. That&amp;#39s almost fast enough to keep up with cars on the highway!
+
+There is only one land mammal on the planet that can run faster than the pronghorn: the African cheetah. But pronghorns have the advantage over long distances, as they have more stamina and can easily maintain their rapid pace over several kilometers.</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit12/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">34</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">12</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">When you walk, you roll on your feet from heel to ball. But pronghorns lengthen their stride by walking on the tips of their toes, reaching farther with each step.
+
+If a pronghorn entered a long jump competition it would probably win. At high speed, pronghorns can jump over gaps up to 8 meters wide. That&amp;#39s twice the width of this diorama. 
+</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit12/artifact2.JPG</column>
+            <column name="TotalArtifactNumber">35</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">12</column>
+            <column name="ArtifactNumber">2</column>
+            <column name="Info">Not as proficient at high jump, a pronghorn would rather crawl under a fence than jump over it. Unfortunately, high fences often keep migrating pronghorn herds from reaching crucial feeding grounds.</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit12/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">36</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">13</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Notice the wide hooves of the caribou. Their toes spread out to act like snowshoes, distributing their weight so they don&amp;#39t sink in deep snow or soft boggy terrain.
+
+No need for shovels: caribou use their broad hooves to scoop up the snow that covers the ground lichen they like to eat in winter.
+
+The name &amp;#39caribou&amp;#39 is believed to have come from the Mi&amp;#39kmaq word xalibu, &amp;#39meaning the animal who digs&amp;#39.
+Caribou are covered in a thick coat of hollow guard hairs. Air pockets inside these hairs create an insulating layer that retains body heat. Caribou often have to cross wide rushing rivers that block their path. Luckily, they&amp;#39re excellent swimmers. Their wide hooves act like paddles, and their dense coat of hollow hairs helps them to stay afloat.
+
+
+In winter, stiff hairs between the toes of the caribou grow into thick tufts that protect their fleshy footpads from the icy ground. 
+</column>
+            <column name="Image">Media/museum1/exhibits/MammalGallery/exhibit13/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">37</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">14</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">This slab of rock is sedimentary, one of the three main types of rock types. It formed when rock particles were compacted and cemented into a new rock.</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit14/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">38</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">14</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">This slab of rock is metamorphic, one of the three main rock types. It formed when a pre-existing rock was transformed by the Earth&amp;#39s heat and pressure into a new rock.</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit14/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">39</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">14</column>
+            <column name="ArtifactNumber">2</column>
+            <column name="Info">This slab of rock is magmatic, one of the three main rock types. It formed when liquid rock, magma, cooled and solidified into new rock.</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit14/artifact2.JPG</column>
+            <column name="TotalArtifactNumber">40</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">15</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">The planets take shape: as dust and gasses circled the early sun, electrostatic forces stuck these cosmic grains together. As more particles merged, they formed larger masses with increased gravity. Soon, chunks were colliding with each other and growing with every impact. These circling bodies eventually swept their orbital path clear of debris and formed the planets in their present orbits. 
+
+
+
+
+</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit15/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">41</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">15</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">Birth of a star: our solar system began as a cloud of gasses and dust called the pre-solar nebula. When a nearby supernova exploded, shock waves ripped through the cloud and collapsed the nebula. Most of the collapsing mass collected at the center to become the sun. The rest formed a swirling disk around the newly ignited star.
+</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit15/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">42</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">16</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Earth-born of a spinning cloud of dust within a boundless universe. From its beginnings as a sea of molten rock, Earth has unceasingly transformed itself into the vast expanse of water dotted with continents that makes up our planet today.
+</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit16/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">43</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">17</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Moonrise: Earth&amp;#39s moon formed when an asteroid the size of Mars struck the young planet. The enormous force of the impact re-melted much of the rocky mantle and sent a spray of liquid rock into orbit around the Earth. The rock solidified and coalesced into a single body that is now our moon.
+
+The same huge impact that created the moon also likely changed Earth&amp;#39s axis. The resulting 23.5 degree tilt gives Earth its seasons.</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit17/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">44</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">17</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">Earth and Life: Life appeared on Earth 3.8 billion years ago, out of seemingly uninhabitable environment. Since then life has flourished and transformed our planet.
+
+Earth provides for life. Its particular chemical and physical conditions allowed life to appear and continue to allow it to thrive.
+
+The appearance of life in the universe requires a specific mix of favorable conditions. Earth has just the right combination of qualities. It is close enough to the sun to keep water liquid, and far enough to prevent the water from evaporating away.
+</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit17/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">45</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">18</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Dating the Solar System: The surface of the Earth has been continuously recycled, so we&amp;#39re not able to date our planet from surface rocks. Meteorites, however, are relics from the long-ago brith of our solar system. They contain the same materials that formed the planets. Dating these meteorites can give us a date for the information of the solar system: 4.56 to 4.57 billion years ago.</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit18/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">46</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">18</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">We can&amp;#39t directly observe the compositions of Earth all the way to its core, but meteorites can give us clues. Stony meteorites are the most common types that land on Earth. Because they formed at the same time and from the same material as the inner rocky planets of our solar system, including Earth, we would expect that these meteorites and Earth would have the same composition. The meteorites, however, typically contain more iron than we find in rocks from the Earth&amp;#39s crust and mantle. The rest of the Earth&amp;#39s iron must therefore be deep under the surface.
+
+Earth&amp;#39s gravity supports this idea. Based on materials that we find near the surface and in the mantle, Earth&amp;#39s gravity should be weaker. But if heavier materials such as iron are hidden at the core, then Earth&amp;#39s gravity makes sense.
+</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit18/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">47</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">18</column>
+            <column name="ArtifactNumber">2</column>
+            <column name="Info">Studying different types of meteorites gave scientists ideas about the processes that formed Earth&amp;#39s layers. In some meteorites, the rock and metals are evenly distributed. Others, however have very different compositions. Gravitational differentiation causes light materials to rise and heavy ones to sink. This process accounts for the different kinds of meteorites.</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit18/artifact2.JPG</column>
+            <column name="TotalArtifactNumber">48</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">18</column>
+            <column name="ArtifactNumber">3</column>
+            <column name="Info">The planets, including Earth, formed from many smaller particles crashing and sticking together to form asteroids. Through collisional and radioactive heating, some of the larger asteroids became hot and plastic enough to separate into layers. The iron and other dense elements sank to their core. </column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit18/artifact3.JPG</column>
+            <column name="TotalArtifactNumber">49</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">19</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Extreme Makeover! Our planet continuously gets a facelift thanks to plate tectonics. Two hundred million years ago, all the continents were stuck together in a super-continent called Pangaea. But now our world looks very different!
+
+In another 100 million years, the Atlantic Ocean will widen and the Mediterranean Sea will disappear as Africa collides with Europe. Australia and Southeast Asia will join together, and California will move in the direction of Alaska. Eventually, in about 250 million years, another supercontinent, Pangaea Ultima, will appear. 
+</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit19/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">50</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">20</column>
+            <column name="ArtifactNumber">0</column>
+            <column name="Info">Non-silicate minerals: nonsilicate minerals do not contain the silicate tetrahedron as their main building block. Instead they are made up of non-silicate elements such as carbon, oxygen, hydrogen, sulphur, phosphorous, fluorine and chlorine.
+</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit20/artifact0.JPG</column>
+            <column name="TotalArtifactNumber">51</column>
+        </table>
+        <table name="artifacts">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">20</column>
+            <column name="ArtifactNumber">1</column>
+            <column name="Info">The non-silicate minerals are a far smaller group than the silicates, but they include several economically important mineral classes. Among these are sulphates, halides, carbonates and phosphates. 
+</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit20/artifact1.JPG</column>
+            <column name="TotalArtifactNumber">52</column>
+        </table>
+        <!-- Table catagorical -->
+        <table name="catagorical">
+            <column name="ExhibitNumber">1</column>
+            <column name="AdditionalInformation">Wetlands, whether they be swamps, marshes, bogs, or flood plains, are home to many interesting animals. Some have unusual adaptations that enable them to survive even when the wetland dries up during drought.</column>
+            <column name="Weblink">http://www.mbgnet.net/fresh/wetlands/animals/</column>
+        </table>
+        <table name="catagorical">
+            <column name="ExhibitNumber">2</column>
+            <column name="AdditionalInformation">The molluscs or mollusks compose the large phylum of invertebrate animals known as the Mollusca. Around 85,000 extant species of molluscs are recognized. Molluscs are the largest marine phylum, comprising about 23% of all the named marine organisms. Numerous molluscs also live in freshwater and terrestrial habitats. They are highly diverse, not just in size and in anatomical structure, but also in behaviour and in habitat. </column>
+            <column name="Weblink">http://en.wikipedia.org/wiki/Mollusca</column>
+        </table>
+        <table name="catagorical">
+            <column name="ExhibitNumber">5</column>
+            <column name="AdditionalInformation">The cougar (Puma concolor), also known as the mountain lion, puma, panther, painter, mountain cat, or catamount, is a large cat of the family Felidae native to the Americas. Its range, from the Canadian Yukon to the southern Andes of South America, is the greatest of any large wild terrestrial mammal in the Western Hemisphere. An adaptable, generalist species, the cougar is found in most American habitat types. </column>
+            <column name="Weblink">http://en.wikipedia.org/wiki/Cougar</column>
+        </table>
+        <table name="catagorical">
+            <column name="ExhibitNumber">6</column>
+            <column name="AdditionalInformation">Beavers are famously busy, and they turn their talents to reengineering the landscape as few other animals can. When sites are available, beavers burrow in the banks of rivers and lakes. But they also transform less suitable habitats by building dams. Felling and gnawing trees with their strong teeth and powerful jaws, they create massive log, branch, and mud structures to block streams and turn fields and forests into the large ponds that beavers love.
+
+Domelike beaver homes, called lodges, are also constructed of branches and mud. They are often strategically located in the middle of ponds and can only be reached by underwater entrances. These dwellings are home to extended families of monogamous parents, young kits, and the yearlings born the previous spring.</column>
+            <column name="Weblink">http://animals.nationalgeographic.com/animals/mammals/beaver/</column>
+        </table>
+        <table name="catagorical">
+            <column name="ExhibitNumber">7</column>
+            <column name="AdditionalInformation">Bears are mammals of the family Ursidae. Bears are classified as caniforms, or doglike carnivorans, with the pinnipeds being their closest living relatives. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, Europe, and Asia.
+
+Common characteristics of modern bears include large bodies with stocky legs, long snouts, shaggy hair, plantigrade paws with five nonretractile claws, and short tails. While the polar bear is mostly carnivorous, and the giant panda feeds almost entirely on bamboo, the remaining six species are omnivorous with varied diets.</column>
+            <column name="Weblink">http://en.wikipedia.org/wiki/Bear</column>
+        </table>
+        <table name="catagorical">
+            <column name="ExhibitNumber">8</column>
+            <column name="AdditionalInformation">Thinhorn Sheep spend the summer grazing in alpine meadows atop the peaks.  In the fall the sheep move to their winter range a few kilometers away where the wind keeps the snow shallow and the sun warms south-facing slopes.  They will use the same migration routes for generations and return to the same protective cliffs to give birth to their lambs every year.
+
+Dall's Sheep have long been prized for their delicious meat. First Nations would traditionally hunt sheep with bow and arrows or set snares along frequented travel routes. Sheep fleece was used to make blankets, jackets, and winter pants and horns used for ladles and dishes.</column>
+            <column name="Weblink">http://www.env.gov.yk.ca/animals-habitat/mammals/sheep.php</column>
+        </table>
+        <table name="catagorical">
+            <column name="ExhibitNumber">14</column>
+            <column name="AdditionalInformation">The three main types, or classes, of rock are sedimentary, metamorphic, and igneous and the differences among them have to do with how they are formed.
+
+Sedimentary rocks are formed from particles of sand, shells, pebbles, and other fragments of material. Together, all these particles are called sediment. Gradually, the sediment accumulates in layers and over a long period of time hardens into rock. Generally, sedimentary rock is fairly soft and may break apart or crumble easily. You can often see sand, pebbles, or stones in the rock, and it is usually the only type that contains fossils.
+
+Metamorphic rocks are formed under the surface of the earth from the metamorphosis (change) that occurs due to intense heat and pressure (squeezing). The rocks that result from these processes often have ribbonlike layers and may have shiny crystals, formed by minerals growing slowly over time, on their surface.
+
+Igneous rocks are formed when magma (molten rock deep within the earth) cools and hardens. Sometimes the magma cools inside the earth, and other times it erupts onto the surface from volcanoes (in this case, it is called lava). When lava cools very quickly, no crystals form and the rock looks shiny and glasslike. Sometimes gas bubbles are trapped in the rock during the cooling process, leaving tiny holes and spaces in the rock.
+
+</column>
+            <column name="Weblink">http://www.learner.org/interactives/rockcycle/types.html</column>
+        </table>
+        <table name="catagorical">
+            <column name="ExhibitNumber">15</column>
+            <column name="AdditionalInformation">Our solar neighborhood is an exciting place. The Solar System is full of planets, moons, asteroids, comets, minor planets, and many other exciting objects. Learn about Io, the explosive moon that orbits the planet Jupiter, or explore the gigantic canyons and deserts on Mars.</column>
+            <column name="Weblink">http://www.kidsastronomy.com/solar_system.htm</column>
+        </table>
+        <table name="catagorical">
+            <column name="ExhibitNumber">18</column>
+            <column name="AdditionalInformation">A meteorite is a solid piece of debris, from such sources as asteroids or comets, that originates in outer space and survives its impact with the Earth's surface. It is called a meteoroid before its impact. A meteorite's size can range from small to extremely large. When a meteoroid enters the atmosphere, friction, pressure, and chemical interactions with the atmospheric gases cause it to heat up and radiate that energy, thus forming a fireball, also known as a meteor or shooting/falling star. A bolide is either an extraterrestrial body that collides with the Earth, or an exceptionally bright, fireball-like meteor regardless of whether it ultimately impacts the surface.</column>
+            <column name="Weblink">http://en.wikipedia.org/wiki/Meteorite</column>
+        </table>
+        <table name="catagorical">
+            <column name="ExhibitNumber">19</column>
+            <column name="AdditionalInformation">There are a few handfuls of major plates and dozens of smaller, or minor, plates. Six of the majors are named for the continents embedded within them, such as the North American, African, and Antarctic plates. Though smaller in size, the minors are no less important when it comes to shaping the Earth. The tiny Juan de Fuca plate is largely responsible for the volcanoes that dot the Pacific Northwest of the United States.</column>
+            <column name="Weblink">http://science.nationalgeographic.com/science/earth/the-dynamic-earth/plate-tectonics-article/</column>
+        </table>
+        <!-- Table dramatic -->
+        <table name="dramatic">
+            <column name="ExhibitNumber">1</column>
+            <column name="Background">Dramatic/assets/blue.jpg</column>
+            <column name="Tear">Dramatic/assets/topBlue.png</column>
+            <column name="Splash">Dramatic/assets/splashRed.png</column>
+            <column name="FavouredArtifactThere">You found the whale! Did you look up? There was also a whale skeleton above the exhibit.</column>
+            <column name="FavouredArtifactAbsent">You missed the whale! Did you look up? There was a whale skeleton above the exhibit.</column>
+            <column name="FavouredArtifactNumber">1</column>
+            <column name="AverageTime">10</column>
+        </table>
+        <table name="dramatic">
+            <column name="ExhibitNumber">2</column>
+            <column name="Background">Dramatic/assets/darkOrange.jpg</column>
+            <column name="Tear">Dramatic/assets/topDarkOrange.png</column>
+            <column name="Splash">Dramatic/assets/splashGray.png</column>
+            <column name="FavouredArtifactThere">You found the black sea mouse! It's really a worm but called a mouse because it has short hairs on it's back and likes to hide half-buried in the sandy ocean floor.</column>
+            <column name="FavouredArtifactAbsent">You missed taking a photo of the black sea mouse! Look for it next time, it's not what it sounds like.</column>
+            <column name="FavouredArtifactNumber">1</column>
+            <column name="AverageTime">67</column>
+        </table>
+        <table name="dramatic">
+            <column name="ExhibitNumber">5</column>
+            <column name="Background">Dramatic/assets/forestGreen.jpg</column>
+            <column name="Tear">Dramatic/assets/topForestGreen.png</column>
+            <column name="Splash">Dramatic/assets/splashRed.png</column>
+            <column name="FavouredArtifactThere">You found the baby cougar. Can you remember how many there were in this exhibit? </column>
+            <column name="FavouredArtifactAbsent">You missed taking a photo of the baby cougar! Take a photo of it next time to learn more about it.</column>
+            <column name="FavouredArtifactNumber">1</column>
+            <column name="AverageTime">16</column>
+        </table>
+        <table name="dramatic">
+            <column name="ExhibitNumber">6</column>
+            <column name="Background">Dramatic/assets/lavander.jpg</column>
+            <column name="Tear">Dramatic/assets/topLavander.png</column>
+            <column name="Splash">Dramatic/assets/splashBlue.png</column>
+            <column name="FavouredArtifactThere">Next time you are in the woods, look for tree stumps similar to the ones you saw in the display. You maybe able to catch a glimpse of a beaver.</column>
+            <column name="FavouredArtifactAbsent">Did you look closely at the tree stump in this display? It had been chewed upon by beavers and bore their distinctive marks. Try to find it next time you visit the exhibit.  </column>
+            <column name="FavouredArtifactNumber">1</column>
+            <column name="AverageTime">21</column>
+        </table>
+        <table name="dramatic">
+            <column name="ExhibitNumber">7</column>
+            <column name="Background">Dramatic/assets/lighterGreen.jpg</column>
+            <column name="Tear">Dramatic/assets/topLighterGreen.png</column>
+            <column name="Splash">Dramatic/assets/splashRed.png</column>
+            <column name="FavouredArtifactThere">You found the Grizzly bear! Can you name all the other types of bears?</column>
+            <column name="FavouredArtifactAbsent">What is your favourite type of bear? </column>
+            <column name="FavouredArtifactNumber">0</column>
+            <column name="AverageTime">14</column>
+        </table>
+        <table name="dramatic">
+            <column name="ExhibitNumber">8</column>
+            <column name="Background">Dramatic/assets/orange2.jpg</column>
+            <column name="Tear">Dramatic/assets/topOrange.png</column>
+            <column name="Splash">Dramatic/assets/splashGray.png</column>
+            <column name="FavouredArtifactThere">You found the thinhorn sheep siblings, Donald and Daisy.</column>
+            <column name="FavouredArtifactAbsent">The two thinhorn sheep in this display had names. Take a picture of them next time to find out what they were called.</column>
+            <column name="FavouredArtifactNumber">0</column>
+            <column name="AverageTime">25</column>
+        </table>
+        <table name="dramatic">
+            <column name="ExhibitNumber">14</column>
+            <column name="Background">Dramatic/assets/purple.jpg</column>
+            <column name="Tear">Dramatic/assets/topPurple.png</column>
+            <column name="Splash">Dramatic/assets/splashBlue.png</column>
+            <column name="FavouredArtifactThere">Magmatic rock is one of the three types of rocks and comes from deep underground. The type of magmatic rock featured in the display is a type of Biotite rock.</column>
+            <column name="FavouredArtifactAbsent">You missed a picture of a very fine specimen of Biotite rock!</column>
+            <column name="FavouredArtifactNumber">2</column>
+            <column name="AverageTime">54</column>
+        </table>
+        <table name="dramatic">
+            <column name="ExhibitNumber">15</column>
+            <column name="Background">Dramatic/assets/slate.jpg</column>
+            <column name="Tear">Dramatic/assets/topSlate.png</column>
+            <column name="Splash">Dramatic/assets/splashGray.png</column>
+            <column name="FavouredArtifactThere">Can you spot our home, the earth, in the picture you took?</column>
+            <column name="FavouredArtifactAbsent">Can you name all the planets in the solar system? </column>
+            <column name="FavouredArtifactNumber">0</column>
+            <column name="AverageTime">45</column>
+        </table>
+        <table name="dramatic">
+            <column name="ExhibitNumber">18</column>
+            <column name="Background">Dramatic/assets/turquoise.jpg</column>
+            <column name="Tear">Dramatic/assets/topTurquoise.png</column>
+            <column name="Splash">Dramatic/assets/splashRed.png</column>
+            <column name="FavouredArtifactThere">You found the largest meteor on display at the museum!</column>
+            <column name="FavouredArtifactAbsent">Next time try to find the largest meteor on display. It's bigger than you think.</column>
+            <column name="FavouredArtifactNumber">3</column>
+            <column name="AverageTime">134</column>
+        </table>
+        <table name="dramatic">
+            <column name="ExhibitNumber">19</column>
+            <column name="Background">Dramatic/assets/wine.jpg</column>
+            <column name="Tear">Dramatic/assets/topWine.png</column>
+            <column name="Splash">Dramatic/assets/splashBlue.png</column>
+            <column name="FavouredArtifactThere">Did you find the tectonic plate of our continent? Next time try to spot it on the globe.</column>
+            <column name="FavouredArtifactAbsent">Did you know that you can interact with the globe to view how the tectonic plates shift? Try it next time.</column>
+            <column name="FavouredArtifactNumber">0</column>
+            <column name="AverageTime">43</column>
+        </table>
+        <!-- Table exhibits -->
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">1</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/WaterGallery/exhibit1/exhibit1.JPG&quot; usemap=&quot;#exhibit_1&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_1&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot; data-maphilight='{&quot;strokeColor&quot;:&quot;616161&quot;,&quot;strokeWidth&quot;:2,&quot;fillColor&quot;:&quot;d1d1d1&quot;,&quot;fillOpacity&quot;:0.6}' shape=&quot;poly&quot; coords=&quot;121,390,269,380,472,422,476,531,387,610,231,565,166,532,141,509,133,496&quot; /&gt;
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot; data-maphilight='{&quot;strokeColor&quot;:&quot;616161&quot;,&quot;strokeWidth&quot;:2,&quot;fillColor&quot;:&quot;d1d1d1&quot;,&quot;fillOpacity&quot;:0.6}' shape=&quot;poly&quot; coords=&quot;558,425,951,421,1023,440,1022,488,1022,636,488,630,488,477&quot; /&gt;
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">2</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/WaterGallery/exhibit2/exhibit2.JPG&quot; usemap=&quot;#exhibit_2&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_2&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;525,485,637,470,986,506,1019,526,1020,720,808,688,670,654,575,624,521,591&quot; /&gt;
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;322,517,323,444,382,433,543,455,510,474,507,563,482,573,402,547,353,530&quot; /&gt;
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">3</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/WaterGallery/exhibit3/exhibit3.JPG&quot; usemap=&quot;#exhibit_3&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_3&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;762,512,799,503,860,543,859,595,805,611,751,582&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;142,598,149,579,206,559,271,563,304,536,364,542,396,550,395,581,255,600,191,611&quot; /&gt;
+
+&lt;area id=&quot;2&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;197,299,248,252,346,283,369,381,365,476,305,499,241,490,204,480,192,429&quot; /&gt;
+
+&lt;area id=&quot;3&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;370,605,426,585,466,566,497,582,492,617,425,626,387,628&quot; /&gt;
+
+&lt;area id=&quot;4&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;707,404,801,403,815,364,805,305,789,256,767,249,730,260,705,342&quot; /&gt;
+
+&lt;area id=&quot;5&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;410,503,456,491,519,493,569,506,593,532,548,549,485,544,427,535,397,530&quot; /&gt;
+
+&lt;area id=&quot;6&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;597,570,624,506,641,456,725,466,730,534,718,589,702,608,672,611,637,607&quot; /&gt;
+
+&lt;area id=&quot;7&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;550,207,498,201,481,238,510,259,546,244&quot; /&gt;
+
+&lt;area id=&quot;8&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;389,258,386,197,398,177,372,164,355,155,369,131,416,147,449,137,493,170,485,208,425,203&quot; /&gt;
+
+&lt;area id=&quot;9&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;687,127,669,214,719,221,764,218,777,193,776,169,762,143,724,126&quot; /&gt;
+
+&lt;area id=&quot;10&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;434,308,481,290,512,333,518,386,473,404,449,418&quot; /&gt;
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">4</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/WaterGallery/exhibit4/exhibit4.JPG&quot; usemap=&quot;#exhibit_4&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_4&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;231,394,303,413,323,449,318,501,261,542,188,536,151,485,149,443,180,412&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;500,384,461,392,427,414,405,448,397,487,405,526,427,560,461,582,500,590,539,582,573,560,595,526,603,487,595,448,573,414,539,392&quot; /&gt;
+
+&lt;area id=&quot;2&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;299,548,268,554,242,571,225,597,219,628,225,659,242,685,268,702,299,708,330,702,356,685,373,659,379,628,373,597,356,571,330,554&quot; /&gt;
+
+&lt;area id=&quot;3&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;62,516,33,522,8,538,-8,563,-14,592,-8,621,8,646,33,662,62,668,91,662,116,646,132,621,138,592,132,563,116,538,91,522&quot; /&gt;
+
+&lt;area id=&quot;4&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;919,493,878,501,844,524,821,558,813,599,821,640,844,674,878,697,919,705,960,697,994,674,1017,640,1025,599,1017,558,994,524,960,501&quot; /&gt;
+
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">5</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/MammalGallery/exhibit5/exhibit5.JPG&quot; usemap=&quot;#exhibit_5&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_5&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;140,250,189,236,225,233,235,214,244,187,251,174,271,176,287,180,294,169,298,186,298,211,300,228,284,235,288,250,309,265,323,278,357,286,382,303,378,315,352,312,314,303,338,320,363,335,359,347,329,344,323,357,277,373,241,369,198,357,148,377,202,411,240,388,266,380,289,396,240,438,131,423,66,377,51,323,81,279&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;746,471,773,459,814,429,856,408,882,428,895,423,891,446,855,471,805,514,783,520,756,516,744,502&quot; /&gt;
+
+
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">6</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/MammalGallery/exhibit6/exhibit6.JPG&quot; usemap=&quot;#exhibit_6&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_6&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;229,489,263,488,280,495,324,481,376,502,398,550,398,596,427,613,466,612,455,635,406,636,367,654,307,653,289,639,297,601,288,571,254,554,221,542,211,518,207,512&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;470,580,477,555,490,535,494,526,502,555,518,577,535,600,558,667,548,707,525,712,490,679,423,664,459,641,471,624&quot; /&gt;
+
+
+&lt;area id=&quot;2&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;674,496,619,498,593,512,632,590,691,629,738,654,760,658,770,534,740,511,733,443,741,421,713,411,689,425,673,455,670,480&quot; /&gt;
+
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">7</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/MammalGallery/exhibit7/exhibit7.JPG&quot; usemap=&quot;#exhibit_7&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_7&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;459,525,472,504,467,487,482,434,483,418,494,415,535,378,574,348,619,346,655,334,708,353,730,390,723,469,716,525,701,552,668,559,591,609,554,615,533,602,547,580,561,556,572,550,579,532,549,500,533,523,519,526,494,549,475,546,468,544&quot; /&gt;
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">8</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/MammalGallery/exhibit8/exhibit8.JPG&quot; usemap=&quot;#exhibit_8&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_8&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;302,346,318,306,321,293,269,238,255,230,250,222,237,230,218,217,220,210,235,216,254,177,261,174,271,184,297,168,323,176,334,192,349,208,384,207,433,201,456,214,466,223,460,245,494,252,506,262,532,246,556,282,573,300,618,298,652,320,647,352,657,378,634,408,638,426,594,448,552,446,544,433,528,436,500,445,484,441,503,417,493,402,504,372,479,316,462,327,436,322,401,327,374,349,346,356,317,360&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;789,593,811,509,792,466,784,415,767,394,739,387,744,370,774,339,788,322,821,312,862,326,870,357,856,380,892,386,933,388,958,403,957,442,952,478,948,524,949,575,945,591,903,572,866,612,808,609,793,608&quot; /&gt;
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">9</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/MammalGallery/exhibit9/exhibit9.JPG&quot; usemap=&quot;#exhibit_9&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_9&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;157,579,160,478,169,454,175,425,167,386,172,362,134,365,137,326,186,292,218,294,247,285,327,294,363,294,386,276,453,266,494,260,534,243,503,218,467,192,484,190,482,166,502,177,504,170,520,182,521,173,540,198,543,164,569,218,610,182,593,229,619,218,628,232,642,217,605,254,619,271,647,280,671,319,671,345,652,348,634,355,623,345,620,335,598,349,582,351,568,367,553,359,540,379,501,397,480,423,472,448,450,464,447,506,456,532,458,565,470,618,450,616,413,599,307,582&quot; /&gt;
+
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">10</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/MammalGallery/exhibit10/exhibit10.JPG&quot; usemap=&quot;#exhibit_10&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_10&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;49,340,89,328,137,316,181,317,237,329,269,343,292,333,327,333,364,343,395,331,438,338,462,359,487,398,501,415,510,433,516,457,521,475,509,487,489,493,459,504,418,495,397,493,381,501,387,515,365,526,338,527,328,554,292,552,262,546,261,569,241,581,196,567,134,569,115,595,87,587,43,570&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;832,458,845,451,859,439,865,432,881,442,910,463,923,487,928,514,935,501,951,488,962,505,961,532,936,557,933,575,928,591,913,594,900,587,877,603,868,607,870,579,871,565,856,563,844,560,842,544,852,530,859,508,865,489,860,474,849,471&quot; /&gt;
+
+
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">11</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/MammalGallery/exhibit11/exhibit11.JPG&quot; usemap=&quot;#exhibit_11&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_11&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;4,329,104,310,207,297,255,299,298,320,352,380,374,384,379,399,401,419,405,444,418,442,405,465,376,502,345,510,321,527,300,546,171,577,12,581&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;728,473,755,451,829,467,879,474,907,486,911,479,924,478,944,460,948,452,960,457,1022,475,1022,631,986,619,957,605,856,566,765,555,754,548,787,519,760,505,736,500,723,494,723,483&quot; /&gt;
+
+
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">12</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/MammalGallery/exhibit12/exhibit12.JPG&quot; usemap=&quot;#exhibit_12&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_12&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;31,449,47,440,109,448,132,445,140,454,156,427,150,411,157,403,167,418,183,416,194,398,190,391,202,402,194,420,210,435,209,448,186,448,165,488,136,520,122,523,118,552,132,597,113,596,40,588,27,588,22,528,26,458&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;816,574,828,533,795,501,773,466,771,444,749,446,744,436,768,412,757,391,765,391,766,366,776,406,786,405,783,391,792,387,788,369,795,366,795,407,806,401,810,421,823,456,839,460,868,468,953,457,995,478,1005,499,1006,535,995,546,1003,569,1005,612,996,634,984,644,955,625,949,617,957,593,930,557,891,553,853,550,832,580&quot; /&gt;
+
+&lt;area id=&quot;2&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;573,567,592,511,573,475,568,444,566,427,579,436,588,435,598,426,593,454,607,454,627,459,614,450,617,441,625,426,621,417,635,430,646,415,645,436,654,450,670,457,719,454,758,466,768,495,780,519,780,532,751,525,727,523,709,538,686,545,680,563,659,573,638,564,612,563&quot; /&gt;
+
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">13</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/MammalGallery/exhibit13/exhibit13.JPG&quot; usemap=&quot;#exhibit_13&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_13&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;355,555,359,540,363,525,364,501,366,475,345,468,327,483,301,466,298,429,289,428,278,419,280,399,285,387,275,375,280,362,303,368,322,367,333,372,344,383,382,381,417,389,461,384,487,383,525,401,559,405,610,396,651,396,681,415,682,448,674,471,672,498,671,534,667,564,662,573,603,585,548,609,513,591,488,556&quot; /&gt;
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">14</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/EarthGallery/exhibit14/exhibit14.JPG&quot; usemap=&quot;#exhibit_14&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_14&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;5,343,191,335,198,538,18,578&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;579,323,670,321,670,454,577,462&quot; /&gt;
+
+&lt;area id=&quot;2&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;915,315,992,317,988,430,904,433&quot; /&gt;
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">15</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/EarthGallery/exhibit15/exhibit15.JPG&quot; usemap=&quot;#exhibit_15&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_15&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;27,189,124,125,147,116,219,127,368,199,391,243,410,294,387,340,355,354,286,331,196,330,163,376,112,441,84,499,38,470,15,413,17,300,10,228&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;435,166,485,148,545,137,621,158,617,213,642,231,700,230,703,262,770,265,764,324,625,332,534,351,474,346,434,310,425,266,428,207&quot; /&gt;
+
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">16</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/EarthGallery/exhibit16/exhibit16.JPG&quot; usemap=&quot;#exhibit_16&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_16&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;100,341,434,349,439,714,116,727&quot; /&gt;
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">17</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/EarthGallery/exhibit17/exhibit17.JPG&quot; usemap=&quot;#exhibit_17&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_17&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;87,144,259,142,263,185,427,195,426,240,440,309,507,315,510,536,267,546,177,579,89,579,35,542,9,496,2,268&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;516,137,521,625,958,640,974,324,1019,274,1020,167,933,103,838,136&quot; /&gt;
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">18</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/EarthGallery/exhibit18/exhibit18.JPG&quot; usemap=&quot;#exhibit_18&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_18&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;68,244,107,239,162,252,199,276,221,305,238,338,245,374,233,414,211,440,197,467,161,484,110,492,51,477,11,450,0,435,0,287,32,258&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;255,261,253,441,273,476,423,476,426,267&quot; /&gt;
+
+&lt;area id=&quot;2&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;532,203,621,183,689,204,737,252,764,310,766,377,756,431,716,484,668,518,594,530,512,505,463,461,440,403,438,344,457,284,485,242&quot; /&gt;
+
+&lt;area id=&quot;3&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;784,316,778,427,950,426,963,265,918,248,877,241,858,299,851,314&quot; /&gt;
+
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">19</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/EarthGallery/exhibit19/exhibit19.JPG&quot; usemap=&quot;#exhibit_19&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_19&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;643,694,574,667,509,626,455,573,410,489,391,399,410,298,458,209,535,140,637,96,710,86,791,99,875,136,957,206,990,267,1011,329,1018,387,1010,452,993,507,956,574,900,629,820,677,741,688&quot; /&gt;
+&lt;/map&gt;</column>
+        </table>
+        <table name="exhibits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">20</column>
+            <column name="ImageMap">&lt;div class=&quot;map&quot; &gt;
+&lt;img id=&quot;imageMap&quot; class=&quot;map maphilighted&quot; src=&quot;Media/museum1/exhibits/EarthGallery/exhibit20/exhibit20.JPG&quot; usemap=&quot;#exhibit_20&quot; /&gt;
+&lt;/div&gt;</column>
+            <column name="Area">&lt;map name=&quot;exhibit_20&quot;&gt;
+&lt;area id=&quot;0&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;691,242,725,223,747,193,776,182,798,199,819,214,836,229,825,261,830,286,854,314,853,336,828,349,801,343,769,348,731,344,719,333,732,295,716,285,697,271&quot; /&gt;
+
+&lt;area id=&quot;1&quot; href=&quot;javascript:void(0);&quot;  shape=&quot;poly&quot; coords=&quot;467,509,477,502,501,524,511,541,519,556,529,575,512,584,490,585,474,580,461,576,448,582,451,568,448,557,444,544,451,528&quot; /&gt;
+&lt;/map&gt;</column>
+        </table>
+        <!-- Table exhibitVisits -->
+        <table name="exhibitVisits">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">19</column>
+            <column name="VisitNumber">6</column>
+            <column name="ExhibitType">Rocks and Space</column>
+            <column name="NumberOfArtifacts">1</column>
+            <column name="ExhibitTitle">Tectonic Plates</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit19/exhibit19.JPG</column>
+            <column name="VisitStart">2015-05-20 09:45:57</column>
+            <column name="VisitEnd">2015-05-20 09:46:12</column>
+        </table>
+        <!-- Table itinerary -->
+        <table name="itinerary">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">19</column>
+            <column name="VisitationNumber">1</column>
+            <column name="ExhibitTitle">Tectonic Plates</column>
+            <column name="Image">Media/museum1/exhibits/EarthGallery/exhibit19/exhibit19.JPG</column>
+        </table>
+        <!-- Table museum -->
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">1</column>
+            <column name="PositionX">-45</column>
+            <column name="PositionY">125</column>
+            <column name="Title">Marine Mammals and Birds</column>
+            <column name="Picture">Media/museum1/exhibits/WaterGallery/exhibit1/exhibit1.JPG</column>
+            <column name="Text">Learn about marine mammals, such as whales and how they have adapted to their habitat and about marine birds who live along the coast. </column>
+            <column name="Icon">MuseumGen/icons/iconBlue.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconBlueActive.png</column>
+        </table>
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">2</column>
+            <column name="PositionX">-45</column>
+            <column name="PositionY">115</column>
+            <column name="Title">Molusks and Invertabrates</column>
+            <column name="Picture">Media/museum1/exhibits/WaterGallery/exhibit2/exhibit2.JPG</column>
+            <column name="Text">Molusks and Invertabrates are some of the earliest forms of complex oceanic life. Learn how they evolved and survived. See specimens and learn how strange they can be.</column>
+            <column name="Icon">MuseumGen/icons/iconBlue.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconBlueActive.png</column>
+        </table>
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">5</column>
+            <column name="PositionX">-40</column>
+            <column name="PositionY">145</column>
+            <column name="Title">Cougar</column>
+            <column name="Picture">Media/museum1/exhibits/MammalGallery/exhibit5/exhibit5.JPG</column>
+            <column name="Text">Learn about the cougar and it's baby cubs. See a diorama of it in it's natural habitat and learn how it hunts. </column>
+            <column name="Icon">MuseumGen/icons/iconYellow.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconYellowActive.png</column>
+        </table>
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">6</column>
+            <column name="PositionX">-40</column>
+            <column name="PositionY">155</column>
+            <column name="Title">Beaver</column>
+            <column name="Picture">Media/museum1/exhibits/MammalGallery/exhibit6/exhibit6.JPG</column>
+            <column name="Text">See a diorama of Canada's national animal in it's natural habitat. Learn what makes the beaver such a busy animal and see tree stumps that it has chewed. </column>
+            <column name="Icon">MuseumGen/icons/iconYellow.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconYellowActive.png</column>
+        </table>
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">7</column>
+            <column name="PositionX">-50</column>
+            <column name="PositionY">145</column>
+            <column name="Title">Bear</column>
+            <column name="Picture">Media/museum1/exhibits/MammalGallery/exhibit7/exhibit7.JPG</column>
+            <column name="Text">Learn all about the Grizzly Bear! Rawr!</column>
+            <column name="Icon">MuseumGen/icons/iconYellow.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconYellowActive.png</column>
+        </table>
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">8</column>
+            <column name="PositionX">-50</column>
+            <column name="PositionY">155</column>
+            <column name="Title">Thinhorn Sheep</column>
+            <column name="Picture">Media/museum1/exhibits/MammalGallery/exhibit8/exhibit8.JPG</column>
+            <column name="Text">See Thinhorn sheep up top high mountain peaks in this diorama. Learn about how they make their home in their mountains and why they grow such big horns. </column>
+            <column name="Icon">MuseumGen/icons/iconYellow.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconYellowActive.png</column>
+        </table>
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">15</column>
+            <column name="PositionX">-40</column>
+            <column name="PositionY">40</column>
+            <column name="Title">The Solar System</column>
+            <column name="Picture">Media/museum1/exhibits/EarthGallery/exhibit15/exhibit15.JPG</column>
+            <column name="Text">Learn about how it all began; the birth of the universe and how stars are formed. </column>
+            <column name="Icon">MuseumGen/icons/iconGreen.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconGreenActive.png</column>
+        </table>
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">14</column>
+            <column name="PositionX">-40</column>
+            <column name="PositionY">30</column>
+            <column name="Title">The Three Types of Rock</column>
+            <column name="Picture">Media/museum1/exhibits/EarthGallery/exhibit14/exhibit14.JPG</column>
+            <column name="Text">Learn about the three different types of rock that compose the earths crust. Learn about how they are formed and where they are found. </column>
+            <column name="Icon">MuseumGen/icons/iconGreen.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconGreenActive.png</column>
+        </table>
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">18</column>
+            <column name="PositionX">-45</column>
+            <column name="PositionY">10</column>
+            <column name="Title">Meteorites</column>
+            <column name="Picture">Media/museum1/exhibits/EarthGallery/exhibit18/exhibit18.JPG</column>
+            <column name="Text">Not all rocks come from Earth! Some come from outer space! Learn all about meteorites in this exhibit, how they are formed, what they can tell us about how old the Earth is, and see some examples of them. </column>
+            <column name="Icon">MuseumGen/icons/iconGreen.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconGreenActive.png</column>
+        </table>
+        <table name="museum">
+            <column name="MuseumNumber">1</column>
+            <column name="ExhibitNumber">19</column>
+            <column name="PositionX">-33</column>
+            <column name="PositionY">10</column>
+            <column name="Title">Tectonic Plates</column>
+            <column name="Picture">Media/museum1/exhibits/EarthGallery/exhibit19/exhibit19.JPG</column>
+            <column name="Text">The Earth's mantle is not a uniform thing. It contains many cracks and fault lines in which different tectonic plates shift against each other from the pressures below. Learn about how the Earth undergoes geologic change. </column>
+            <column name="Icon">MuseumGen/icons/iconGreen.png</column>
+            <column name="ActiveIcon">MuseumGen/icons/iconGreenActive.png</column>
+        </table>
+        <!-- Table sequential -->
+        <table name="sequential">
+            <column name="ExhibitNumber">0</column>
+            <column name="PositionX">3006</column>
+            <column name="PositionY">3175</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">1</column>
+            <column name="PositionX">4327</column>
+            <column name="PositionY">1075</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">2</column>
+            <column name="PositionX">4904</column>
+            <column name="PositionY">885</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">5</column>
+            <column name="PositionX">2213</column>
+            <column name="PositionY">1382</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">6</column>
+            <column name="PositionX">2601</column>
+            <column name="PositionY">1382</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">7</column>
+            <column name="PositionX">2974</column>
+            <column name="PositionY">1382</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">8</column>
+            <column name="PositionX">3349</column>
+            <column name="PositionY">1382</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">14</column>
+            <column name="PositionX">1000</column>
+            <column name="PositionY">900</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">15</column>
+            <column name="PositionX">1000</column>
+            <column name="PositionY">1300</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">18</column>
+            <column name="PositionX">1778</column>
+            <column name="PositionY">1081</column>
+        </table>
+        <table name="sequential">
+            <column name="ExhibitNumber">19</column>
+            <column name="PositionX">4617</column>
+            <column name="PositionY">2037</column>
+        </table>
+        <!-- Table userdata0 -->
+    </database>
+</pma_xml_export>

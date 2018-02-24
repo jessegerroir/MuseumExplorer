@@ -1,0 +1,278 @@
+html, body, #map { 
+	width:100%; 
+	height:100%; 
+	margin:0; 
+	padding:0;
+	background-image: url(stripeBackground.png);
+	z-index: 0; 
+	font:14px arial,sans-serif; 
+}
+
+
+
+
+/*--------------- itinerary ------------------ */
+
+#itinerary{
+
+	position: fixed;
+	bottom: 25px;
+	left: 25px;
+	z-index: 1;
+	height: 15%;
+	width: 100%;
+}
+
+#blackBar{
+
+	position: absolute;
+	height: auto;
+	width: 100%;
+	bottom: 45%;
+	left: 0px;
+
+	padding-left: 10%;
+	color: white;
+	font: 18px arial,sans-serif; 
+
+	z-index: -10;
+
+	background-color: #2F4F4F ;
+
+}
+
+#visulization{
+	position: relative;
+	float: left;
+	top: 25%;
+
+}
+
+
+.dropspot{
+	float: left;
+	
+	width: 8%;
+	height: 100%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+[draggable]{
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+
+	-khtml-user-drag: element;
+	-webkit-user-drag: element;
+
+}
+.itineraryItem{
+	width: 100%;
+	height: 100%;
+
+	float: left;
+	border: 4px solid black;
+
+	-webkit-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	text-align: center;
+	cursor: move;
+
+}
+
+.over {
+  border: 2px dashed red;
+}
+
+	.itineraryItem header {
+	  color: #fff;
+/*	  text-shadow: #000 0 1px;
+	  box-shadow: 5px;*/
+	  font: 0.8em arial,sans-serif; 
+	  padding: 1%;
+	  
+	  background-color: black;
+
+
+	  -webkit-border-top-left-radius: 10px;
+	  -moz-border-radius-topleft: 10px;
+	  -ms-border-radius-topleft: 10px;
+	  border-top-left-radius: 10px;
+
+	  -webkit-border-top-right-radius: 10px;
+	  -ms-border-top-right-radius: 10px;
+	  -moz-border-radius-topright: 10px;
+	  border-top-right-radius: 10px;
+
+	  height: 18%;
+	  width: 98%;
+	}
+
+	.itineraryItem span {
+	  	position: relative;
+
+		top: -100px;
+
+		color: #5BC85B;
+		font-size: 2em; 
+		font-family: Impact, Charcoal, sans-serif;
+
+		z-index: 10;
+
+	}
+
+	.itineraryImage{
+		width: 100%;
+		height: 80%;
+
+
+
+		-webkit-border-radius: 0px 0px 10px 10px;
+		-ms-border-radius: 0px 0px 10px 10px;
+		-moz-border-radius: 0px 0px 10px 10px;
+		border-radius: 0px 0px 10px 10px;
+	}
+
+
+
+
+
+/*--------------- sidebar ------------------ */
+
+.sidebarToggle{
+	position: fixed;
+	top: 0%;
+	right: 20%;
+	height: 100%;
+	width: 1%;
+
+	opacity: 1;
+	color: white;
+	background-color: black;
+
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+	z-index: 10;
+
+}
+.sidebarToggle:hover{opacity: .8;}
+
+.sidebarToggleClosed{
+	right: 0%;
+	width: 2%;
+}
+
+	.sidebarToggle>span{
+	position: relative;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+  	font-size: 18pt;
+  	z-index: 10;
+}
+
+.sidebar{
+
+	position: fixed;
+	top: 0%;
+	right: 0%;
+	width: 20%;
+	height: 100%;
+
+	z-index: 1;
+	background-color: #333333;
+
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.sidebarClose {
+	overflow-y: hidden;
+	width: 0%;
+
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+#sideBody{
+	height: 100%;
+	overflow: hidden;
+	float: right;
+}
+
+	#sideTitle{
+		color: white;
+		padding: 15px;
+	}
+
+	#sideImg>img{
+		color: white;
+		padding: 20px;
+		height: 75%;
+		width: 75%;
+	}
+
+	#sideTextbox{
+		color: white;
+		padding: 20px;
+	}
+
+
+	#sideVisit{
+		position: absolute;
+		width: 50%;
+		height: 10%;
+		right:0%;
+		top: 90%;
+
+		opacity: 0.6;
+		color: white;
+		background-color: green;
+
+		text-align: center;
+		padding-top: 10px;
+		font:18px arial,sans-serif;
+
+	   	cursor: pointer;
+	
+	}
+	#sideVisit:hover{
+
+		opacity: 1;
+	   	cursor: pointer;
+
+	}
+
+	#addRemoveExhibit{
+		position: absolute; 
+		width: 50%;
+		height: 10%;
+		right: 50%;
+		top: 90%;
+		
+		opacity: 0.6;
+		color: white;
+		background-color: blue;
+
+		text-align: center;
+		padding-top: 10px;
+		font:18px arial,sans-serif;
+	   	cursor: pointer;
+		
+	}
+	#addRemoveExhibit:hover{
+
+		opacity: 1;
+	   	cursor: pointer;
+
+	}
+

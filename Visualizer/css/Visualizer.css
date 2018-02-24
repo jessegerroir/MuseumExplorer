@@ -1,0 +1,237 @@
+html, body{ 
+	width:100%; 
+	height: 100%;
+	margin:0; 
+	padding:0;
+	background-image: url(stripeBackground.png);
+	z-index: 0; 
+	font:14px arial,sans-serif; 
+}
+
+#wrapper{
+	width: 75%;
+	height: auto;
+	margin: 0px auto;
+	position: relative;
+	background-color: white;
+	text-align: left;
+	padding-bottom: 100px;
+}
+
+	#wrapper h1{
+		
+
+	    display: block;
+	    width: 96%;
+	    background-color: #336699;
+	    color: white;
+
+		position: relative;
+		padding-top: 15px;
+		padding-bottom: 5px;
+
+		padding-left: 5%;
+
+		margin-top: 2%;
+		margin-bottom: 2%;
+
+		box-shadow: 0px 10px 0px 0px #222222;
+
+	}
+
+	#wrapper p{
+		
+
+	    display: block;
+	    width: 90%;
+
+		position: relative;
+
+		margin: 5% 2% 5% 5%;
+
+	}
+
+	#wrapper form{
+		position: relative;
+		margin: 5% auto;
+
+		width: 50%;
+
+	}
+
+	.check{
+		margin: 1%;
+	}
+
+	.myCanvas{
+	    margin-left: auto;
+	    margin-right: auto;
+	    display: block;
+
+	    width: 800px;
+	    position: relative;
+
+	}
+
+	#popupDiv{
+	    position:absolute;
+	    left:100px;
+	    top:100px;
+	    background-color:gray;
+	    opacity: 1;
+	    width:100px;
+	    height:auto;
+	    text-align:left;
+	    padding: 10px;
+	    text-align: center;
+	}
+
+	#popupDiv>img{
+
+		width:75%;
+		height:75%;
+
+	}
+
+	#Slideshow{
+		position: relative;
+		width: 100px;
+		margin-left:5%;
+	}
+
+
+	#Sequential{
+		position: relative;
+		width: 100px;
+		margin-left:5%;
+	}
+
+	#Catagorical{
+		position: relative;
+		width: 100px;
+		margin-left:5%;
+	}
+
+	#Dramatic{
+		position: relative;
+		width: 100px;
+		margin-left:5%;
+	}
+
+	.buttonBlock{
+		position: relative;
+		width: 90%;
+		text-align: left;
+		margin: 5%;
+
+	}
+
+	.buttonBlock>img{
+		width: 40%;
+		margin-left:5%;
+	}
+
+	.buttonBlock>p{
+		width: 40%;
+	}
+
+	.buttonBlock>h2{
+
+	    display: block;
+	    width: 96%;
+	    background-color: #336699;
+	    color: white;
+
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 3px;
+
+		padding-left: 5%;
+
+		margin-top: 2%;
+		margin-bottom: 2%;
+
+		box-shadow: 0px 10px 0px 0px #222222;
+	}
+
+
+
+
+/*
+.dropspot{
+	float: left;
+	background-color: red;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+}
+
+[draggable]{
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+
+	-khtml-user-drag: element;
+	-webkit-user-drag: element;
+
+}
+
+.timelineImage{
+	width: 145px;
+	height: 120px;
+
+	-webkit-border-radius: 0px 0px 10px 10px;
+	-ms-border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.timelineItem{
+	width: 150px;
+	height: 150px;
+	float: left;
+	border: 2px solid #666666;
+  	background-color: #ccc;
+	margin-right: 5px;
+	-webkit-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 3px #000;
+	-ms-box-shadow: inset 0 0 3px #000;
+	box-shadow: inset 0 0 3px #000;
+	text-align: center;
+	cursor: move;
+
+}
+
+.timelineItem.over {
+  border: 2px dashed #000;
+}
+
+.timelineItem header {
+  color: #fff;
+  text-shadow: #000 0 1px;
+  box-shadow: 5px;
+  padding: 5px;
+  background: -moz-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
+  background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(0,0,0)),
+                               color-stop(0.50, rgb(79,79,79)),
+                               color-stop(1, rgb(21,21,21)));
+  background: -webkit-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
+  background: -ms-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
+  border-bottom: 1px solid #ddd;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -ms-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+}
+*/
+
+

@@ -1,0 +1,250 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS RESET DONE ------------------------------------------------------- */
+
+body { height: 100%; }
+body {
+  color: #fff;
+  margin: 0 auto;
+  font: 1em/1.3em Helvetica, sans-serif;
+	background-color: #333;  
+}
+.header {
+  margin-bottom: 40px;
+}
+.clearfix {
+  clear: both;
+}
+
+
+h1 {
+  margin: 40px 0;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px #888;
+}
+a {
+  text-decoration: none;
+  color: #fff;  
+  margin: 0 10px;
+}
+
+/* PAGE CONTAINERS -----------------------*/
+
+html { 
+  background: url(museum.JPG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#visited{
+  position: relative;
+  margin-top: 85vh;
+  height: 15vh;
+  background-color: black;
+
+}
+  #visited h1{
+    margin:0px;
+    padding: 25px 0px;
+    text-align: center;
+    font-size: 60px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+
+  }
+
+#containers{
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  background-color: #f4d432;
+  height:110vh;
+  width:100%;
+  float: left;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  background: url(Dramatic/assets/blue.jpg);
+  background-repeat: repeat-y repeat-x;
+
+
+}
+
+  .container h1{
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  }
+
+  .exhibitImg{
+    position: relative;
+    width: 40%;
+    margin-left: 10%;
+    float: left;
+    z-index: 5;
+  }
+
+
+  .topTear{
+    background: url(Dramatic/assets/topWine.jpg);
+    position: relative;
+    height: 100px;
+    width: 100%;
+    float: left;
+    margin-top: -100px;
+
+  }
+
+  .splash{
+    position: relative;
+    float: left;
+    width: 60%;
+    margin-left: -50%;
+    margin-top: -10%;
+
+  }
+
+  /* Artifact stuff ------------------*/
+
+  .polaroids{
+    position: relative;
+    float: left;
+    width: 40%;
+    margin-right: 0%;
+
+  }
+
+  .polaroid{
+    background: white;
+    display: inline;
+    float: left;
+    margin: 1%;
+    padding: 10px 10px 25px;
+    position:relative;
+    width: 30%;
+    
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+
+
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+
+  }
+
+  .artifactImg{
+    position: relative;
+    width: 100%;
+    float: left;
+
+
+  }
+
+  .polaroid span{
+    float: left;
+    color: black;
+    text-align: center;
+    font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 40%;
+    display: block;
+    word-wrap: break-word;
+  }
+
+  .info{
+    position: relative;
+    float: left;
+    font-size: 14pt;
+    width: 80%;
+    margin-top: 1%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+
+  }
+
+  .blankSpot{
+    margin: 1%;
+    padding: 10px 10px 25px;
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 20vh;
+    background-color: black;
+    opacity: .25;
+
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+
+
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+
+  }
+
+

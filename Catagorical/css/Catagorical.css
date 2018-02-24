@@ -1,0 +1,408 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS RESET DONE ------------------------------------------------------- */
+
+html,body { height: 100%; }
+body {
+  color: #fff;
+  margin: 0 auto;
+  font: 1em/1.3em Helvetica, sans-serif;
+	background-color: #333;  
+}
+.header {
+  margin-bottom: 40px;
+}
+.clearfix {
+  clear: both;
+}
+
+
+h1 {
+  margin: 40px 0;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px #888;
+}
+a {
+  text-decoration: none;
+  color: #333333;  
+  margin: 0 10px;
+}
+
+/* Page Titles -----------------------*/
+
+#MammalTitle{
+  background-color: #b29600;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  float: left;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+  #MammalTitle>h1{
+    text-align: center;
+  }
+  #MammalTitle>p{
+    position: relative;
+    float: left;
+    margin-right: 5%;
+    width: 40%;
+    margin-left: 5%; 
+  }
+  #MammalTitle>img{
+    position: relative;
+    width: 40%;
+    margin-left: 10%;
+    float: left;
+  }
+
+#RocksTitle{
+  background-color: #7F9A65;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  float: left;
+  padding-top: 5%;
+  padding-bottom: 5%; 
+}
+  #RocksTitle>h1{
+    text-align: center;
+  }
+  #RocksTitle>p{
+    position: relative;
+    float: left;
+    margin-right: 5%;
+    width: 40%;
+    margin-left: 5%;
+  }
+  #RocksTitle>img{
+    position: relative;
+    width: 40%;
+    margin-left: 10%;
+    float: left;
+  }
+
+#WaterTitle{
+  background-color: #0099cc;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  float: left;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+  #WaterTitle>h1{
+    text-align: center;
+  }
+  #WaterTitle>p{
+    position: relative;
+    float: left;
+    margin-right: 5%;
+    width: 40%;
+    margin-left: 5%;
+  }
+  #RocksTitle>img{
+    position: relative;
+    width: 40%;
+    margin-left: 10%;
+    float: left;
+  }
+
+/* PAGE CONTAINERS -----------------------*/
+
+#containers{
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 150px;
+}
+
+.container {
+  position: relative;
+  background-color: #f4d432;
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  float: left;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+  .container h1{
+    text-align: center;
+  }
+
+  .exhibitImg{
+    position: relative;
+    width: 40%;
+    margin-left: 10%;
+    float: left;
+  }
+
+.infoContainer{
+  position: relative;
+  float: right;
+  margin-right: 5%;
+  width: 40%;
+  margin-left: 5%;
+}
+
+  .artifactsContainer{
+    position: relative;
+    float: right;
+    width: auto;
+
+  }
+    .artifactImg{
+      position: relative;
+      width: 30%;
+      float: left;
+      margin-bottom: 5%;
+
+    }
+
+    .artifactInfo{
+      position: relative;
+      display: inline;
+      width: 65%;
+      float: right;
+      margin-left: 5%;
+      margin-bottom: 5%;
+
+    }
+
+  .additionalInfo{
+    position: relative;
+    float: right;
+    width: auto;
+  }
+
+
+/* BUTTONS ON FRONT -----------------------*/
+
+.btn {
+  box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+  
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  height: 50px;
+  background-color: #666;
+  
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px #888;
+}
+  a.btn span.btn {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    z-index: -1;
+    
+    width: 100%;
+    background-color: #444;
+  }
+  .btn:active,
+  .btn:active > span.btn{
+    top: 2px;
+  }
+  .btn.active,
+  .btn.active > span.btn {
+    top: 2px;
+  }
+.btn-small {
+  height: 30px;
+  font-size: 12px;
+  line-height: 10px;
+}
+  a.btn-small span.btn {
+    height: 30px;
+  }
+
+
+/* MENU STUFF ----------------------------------------------- */
+/* MENU DIV and CLASS --------------------- */
+#menus {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 2;
+}
+
+.menu {
+  width: 100%;
+  position: relative;
+  height: 75px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+  /* SPECIFIC MENUS ---- */
+  #menu1 {
+    height: 60px;
+  }
+
+  #menu2 {
+    height: 75px;
+  }
+
+
+/* TODO: should probably sort out these classes into id's and classes as parts are bascially just copied twice --------------------- */
+
+/* MENU SlIDER TYPE--------------------- */
+  .menu .slider {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+  }
+  
+    /* dimensions and animation of bar and bar-before --------------------- */
+    .menu .slider .bar, .menu .slider .bar .before{ 
+      height: 15px;
+      width: 0%;
+ 
+      transition: .5s; 
+      -webkit-transition: .5s; 
+     
+      border-radius: 20px;
+      -moz-border-radius: 20px;
+      -webkit-border-radius: 20px;
+    }
+    
+
+    .menu .slider .bar {
+      position: relative;
+      left: 3px;
+      width: 100%;
+      background-color: #777;
+    }
+
+      #barBeforeType{
+        width: 0px;
+        float: left;
+        position: relative;
+        left: -3px;
+      }
+
+      #barBeforeExhibit{
+        width: 100px;
+        float: left;
+        position: relative;
+        left: -3px;
+      }
+
+      #knobType { 
+        position: absolute;
+        top: -5px;
+        left: 0;
+        margin: 0;
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-color: #ccc;
+
+        border-radius: 15px;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        
+        transition: .5s; 
+        -webkit-transition: .5s; 
+      }
+
+      #knobExhibit { 
+        position: absolute;
+        top: -5px;
+        left: 0;
+        margin: 0;
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-color: #ccc;
+
+        border-radius: 15px;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        
+        transition: .5s; 
+        -webkit-transition: .5s; 
+      }
+
+/* MENU ITEMS --------------------- */
+    .menu ul { 
+      height: 100%; 
+      display: inline-block;
+      margin: 10px 0 5px 0;
+    }
+    .menu ul li {
+      margin: 0 40px;
+      font-size: 12px;
+      font-weight: bold;
+      float: left;
+    }
+    .menu ul li a 
+    { 
+      color: #444; 
+      margin: 0; 
+    }
+    

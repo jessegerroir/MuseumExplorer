@@ -1,0 +1,352 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS RESET DONE ------------------------------------------------------- */
+
+html,body { height: 100%; }
+body {
+  color: #fff;
+  margin: 0 auto;
+  font: 1em/1.3em Helvetica, sans-serif;
+	background-color: #333;  
+}
+
+
+h1 {
+  margin: 40px 0;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px #888;
+}
+a {
+  text-decoration: none;
+  color: #fff;  
+  margin: 0 10px;
+}
+
+/* STUFF  -----------------------*/
+#background{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu{
+  position: absolute;
+}
+
+.exhibitMarker{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  z-index: 5;
+  position: absolute;
+
+  margin-top: -100px;
+  margin-left: -100px;
+
+  top: 0px;
+  left: 0px;
+
+  cursor: pointer;
+
+}
+
+.exhibitImage{
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  opacity: 0.75;
+  padding: 5%
+}
+
+.hover{
+  opacity: 1;
+}
+
+.exhibitTitle{
+  color: white;
+  text-align: center;
+  display: block;
+  word-wrap: break-word;
+  
+  font-family: Geneva, Tahoma, Verdana, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+
+  position: absolute;
+  width: 90%;
+  top: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+
+
+}
+
+/* when it's a round marker */
+
+.artifactMarker{
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  background-color: red;
+  position: absolute;
+
+  padding: 0px;
+
+  margin-top: -87px;
+  margin-left: -87px;
+
+  top: 0px;
+  left: 0px;
+
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -transform: scale(1);
+
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+
+  cursor: pointer;
+}
+
+.artifactMarker img{
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  position: relative;
+  opacity: 0.75;
+  padding: 5%;
+  float:left;
+}
+
+.artifactMarker img:hover{
+  opacity: 1;
+}
+
+.artifactMarker span{
+  position: absolute;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+
+.artifactMarker p{
+  color: black;
+  position: relative;
+  padding: 5%;
+  float: right;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+
+
+/* when it's square info panel*/
+
+.artifactSquare{
+
+  border-radius: 5%;
+
+  width: 500px;
+  height: auto;
+
+  background-color: red;
+  position: absolute;
+  padding: 10px;
+
+  margin-top: -87px;
+  margin-left: -87px;
+
+  top: 0px;
+  left: 0px;
+
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -transform: scale(1);
+
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.artifactSquare img{
+  border-radius: 0%;
+  width: 25%;
+  height: 90%;
+  position: relative;
+  opacity: 1;
+  padding: 5px;
+  float:left;
+}
+
+.artifactSquare p{
+  color: white;
+  position: relative;
+  padding: 5px;
+  opacity: 1;
+  float: right;
+  width: 70%;
+  height: auto;
+
+  font-family: Geneva, Tahoma, Verdana, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+}
+
+.artifactSquare span{
+  position: relative;
+  opacity: 1;
+  height: auto;
+  padding: 5px;
+  float: left;
+  width: 25%;
+
+  color: #d3d3d3;
+  text-align: center;
+  display: block;
+  word-wrap: break-word;
+  
+  font-family: Geneva, Tahoma, Verdana, sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: normal;
+}
+
+
+
+/* other */
+
+.closed{
+  position: absolute;
+  opacity: 0%;
+  top: 0px;
+  left: 0px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -transform: scale(0);
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+/* lines */
+
+  div.line{
+    -webkit-transform-origin: 0 50%;
+       -moz-transform-origin: 0 50%;
+                 
+    height: 30px; 
+    background: red; 
+    opacity: 1;
+
+  }
+
+  span.entered{
+    position: relative;
+    float: right;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+
+  span.exited{
+    position: relative;
+    float: left;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+
+  .buttonRight{
+  position: fixed;
+  left: 55%;
+  bottom: 5%;
+
+  width: 5%; 
+  height: auto; 
+
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+
+.buttonLeft {
+  position: fixed;
+  left: 45%;
+  bottom: 5%;
+
+  width: 5%; 
+  height: auto; 
+
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+
