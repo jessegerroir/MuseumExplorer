@@ -1,4 +1,4 @@
-# MusemExplorer
+# Musem Explorer
 
 ### This project is the prototype I built for my thesis for my Masters degree in HCI. 
 
